@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS orders (
+  id INTEGER IDENTITY PRIMARY KEY,
+  order_id UUID UNIQUE,
+  buyer_email VARCHAR(100) NOT NULL,
+  items VARCHAR NOT NULL,
+  place_date TIMESTAMP NOT NULL,
+  total_price DECIMAL NOT NULL,
+  version INTEGER NOT NULL
+);
+
+CREATE SEQUENCE orders_seq;
